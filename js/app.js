@@ -43,14 +43,26 @@ function shuffle(array) {
 
 const cards = document.getElementsByClassName("card");
 const noOfCards = cards.length;
-
+let card1,card2;
+let cardClickNo = 1;
 for(let i=0;i<noOfCards;i++)
 {
-
   cards[i].addEventListener("click",c,false);
 } 
 
 function c(evt)
-{
-    evt.target.classList.add("show","open");         
+{   if(cardClickNo == 1)
+    {
+        evt.target.classList.add("show","open");         
+        card1=evt.target.innerHTML;
+        cardClickNo = 2;
+        console.log(card1);
+    }
+    else
+    {
+        console.log("clicked second card");
+        evt.target.classList.add("show","open");
+        card2=evt.target.innerHTML;
+        console.log(card2);
+    }
 }
