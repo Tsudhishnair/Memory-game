@@ -43,11 +43,14 @@ function shuffle(array) {
 
 const cards = document.getElementsByClassName("card");
 const noOfCards = cards.length;
+
 for(let i=0;i<noOfCards;i++)
 {
+
   cards[i].addEventListener("click",c,false);
 } 
+
 function c(evt)
 {
-  
+    evt.target.classList.add("show","open");         
 }
