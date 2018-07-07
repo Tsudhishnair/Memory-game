@@ -45,6 +45,7 @@ const cards = document.getElementsByClassName("card");
 const noOfCards = cards.length;
 let card1,card2;
 let cardClickNo = 1;
+let totalsteps = 0;
 for(let i=0;i<noOfCards;i++)
 {
   cards[i].addEventListener("click",c,false);
@@ -56,13 +57,34 @@ function c(evt)
         evt.target.classList.add("show","open");         
         card1=evt.target.innerHTML;
         cardClickNo = 2;
-        console.log(card1);
     }
     else
     {
-        console.log("clicked second card");
         evt.target.classList.add("show","open");
         card2=evt.target.innerHTML;
-        console.log(card2);
+        if(card1===card2)
+        {  cardClickNo = 1;
+            const matchcards = document.querySelectorAll(".show");
+            const matchcardlength = matchcards.length;
+            for(let j=0;j<matchcardlength;j++)
+            {
+                matchcards[j].classList.add("match");
+                matchcards[j].classList.remove("open","show");
+            }
+            totalsteps++;
+            document.getElementsByClassName("moves").innerHTML=totalsteps;
+        }
+        else
+        {
+            cardClickNo = 1; 
+            const matchcards = document.querySelectorAll(".show");
+            const matchcardlength = matchcards.length;
+            for(let j=0;j<matchcardlength;j++)
+            {
+                matchcards[j].classList.remove("open","show");
+            }
+            totalsteps++;
+            document.getElementsByClassName("moves").innerHTML=totalsteps;
+        }
     }
 }
