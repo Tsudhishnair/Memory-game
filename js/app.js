@@ -71,8 +71,8 @@ function c(evt)
                 matchcards[j].classList.add("match");
                 matchcards[j].classList.remove("open","show");
             }
-            totalsteps++;
-            document.getElementsByClassName("moves").innerHTML=totalsteps;
+            totalsteps+=1;
+            document.querySelector(".moves").innerHTML=totalsteps;
         }
         else
         {
@@ -83,8 +83,8 @@ function c(evt)
             {
                 matchcards[j].classList.remove("open","show");
             }
-            totalsteps++;
-            document.getElementsByClassName("moves").innerHTML=totalsteps;
+            totalsteps+=1;
+            document.querySelector(".moves").innerHTML=totalsteps;
         }
     }
 }
