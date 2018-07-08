@@ -2,7 +2,8 @@
  * Create a list that holds all of your cards
  */
 
-
+const cards = document.getElementsByClassName("card");
+const noOfCards = cards.length;
 
  /*
  * Display the cards on the page
@@ -13,7 +14,7 @@
  
 
 // Shuffle function from http://stackoverflow.com/a/2450976
-function shuffle(array) {
+function shuffle(array) { 
     var currentIndex = array.length, temporaryValue, randomIndex;
 
     while (currentIndex !== 0) {
@@ -41,8 +42,7 @@ function shuffle(array) {
 
  // code by sudhish
 
-const cards = document.getElementsByClassName("card");
-const noOfCards = cards.length;
+
 let card1,card2;
 let cardClickNo = 1;
 let totalsteps = 0;
@@ -60,7 +60,7 @@ function c(evt)
     }
     else
     {
-        evt.target.classList.add("show","open");
+        evt.target.classList.add("show","open");  
         card2=evt.target.innerHTML;
         if(card1===card2)
         {  cardClickNo = 1;
@@ -76,12 +76,14 @@ function c(evt)
         }
         else
         {
-            cardClickNo = 1; 
+            cardClickNo = 1;
             const matchcards = document.querySelectorAll(".show");
             const matchcardlength = matchcards.length;
             for(let j=0;j<matchcardlength;j++)
             {
+                 
                 matchcards[j].classList.remove("open","show");
+                matchcards[j].classList.add("mismatchedCardsShake"); 
             }
             totalsteps+=1;
             document.querySelector(".moves").innerHTML=totalsteps;
