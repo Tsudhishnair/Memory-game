@@ -81,10 +81,9 @@ function c(evt)
             const matchcardlength = matchcards.length;
             for(let j=0;j<matchcardlength;j++)
             {
-                 
                 matchcards[j].classList.remove("open","show");
                 matchcards[j].classList.add("mismatchedCardsShake"); 
-            }
+            } 
             totalsteps+=1;
             document.querySelector(".moves").innerHTML=totalsteps;
         }
