@@ -125,7 +125,7 @@ h1 {
 
 .mismatchedCardsShake {
     animation: shake 0.5s;
-    animation-iteration-count: 5s;
+    animation-iteration-count: 1000s;
   }
   
   @keyframes shake {

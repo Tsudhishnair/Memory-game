@@ -80,12 +80,32 @@ function c(evt)
             const matchcards = document.querySelectorAll(".show");
             const matchcardlength = matchcards.length;
             for(let j=0;j<matchcardlength;j++)
-            {
-                matchcards[j].classList.remove("open","show");
-                matchcards[j].classList.add("mismatchedCardsShake"); 
+            {  
+               matchcards[j].classList.add("mismatchedCardsShake");  
+               setTimeout(removeshow,500);   
             } 
+            setTimeout(removewobble,500);
             totalsteps+=1;
             document.querySelector(".moves").innerHTML=totalsteps;
         }
+    }
+}
+function removewobble()
+{
+
+    const mismatchedCards = document.querySelectorAll(".mismatchedCardsShake");
+    const mismatchedCardslength = mismatchedCards.length;
+    for(let j=0;j<mismatchedCardslength;j++)
+    {
+      mismatchedCards[j].classList.remove("mismatchedCardsShake");   
+    } 
+}
+
+function removeshow(){
+    const matchcards = document.querySelectorAll(".show");
+    const matchcardlength = matchcards.length;
+    for(let j=0;j<matchcardlength;j++)
+    {
+    matchcards[j].classList.remove("open","show");
     }
 }
