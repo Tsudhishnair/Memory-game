@@ -59,7 +59,8 @@ function c(evt)
         cardClickNo = 2;
     }
     else
-    {
+    {   if(!evt.target.classList.contains("show","open"))
+			{
         evt.target.classList.add("show","open");  
         card2=evt.target.innerHTML;
         if(card1===card2)
@@ -74,6 +75,7 @@ function c(evt)
             totalsteps+=1;
             document.querySelector(".moves").innerHTML=totalsteps;
         }
+        
         else
         {
             cardClickNo = 1;
@@ -87,7 +89,7 @@ function c(evt)
             setTimeout(removewobble,500);
             totalsteps+=1;
             document.querySelector(".moves").innerHTML=totalsteps;
-        }
+			  }  }
     }
 }
 function removewobble()
