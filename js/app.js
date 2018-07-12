@@ -9,8 +9,14 @@ const noOfCards = cards.length;
 // ----------------------------------------------------------------------------------------
 // ----------------------------------------------------------------------------------------
 //shuffling the card 
+
  document.querySelector(".restart").addEventListener("click",function(){
-    shuffle(cards);
+    let a = [];
+    for (let i=0;i<cards.length;i++)
+    {
+        a[i] = cards[i].innerHTML;  
+    }
+    let shuffled = shuffle(a);
  });
 
 // ----------------------------------------------------------------------------------------
