@@ -2,19 +2,29 @@
  * Create a list that holds all of your cards
  */
 
-const cards = document.getElementsByClassName("card");
+let cards = document.getElementsByClassName("card");
 const noOfCards = cards.length;
+let array = [];
+for(let i=0;i<noOfCards;i++)
+{
+ array = cards[i].innerHTML;
+}
+document.querySelector(".restart").addEventListener("click",function(){
+   shuffle(array);
+});
 
- /*
+/*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
  *   - loop through each card and create its HTML
  *   - add each card's HTML to the page
  */
- 
 
-// Shuffle function from http://stackoverflow.com/a/2450976
+
+ // Shuffle function from http://stackoverflow.com/a/2450976
+
 function shuffle(array) { 
+  
     var currentIndex = array.length, temporaryValue, randomIndex;
 
     while (currentIndex !== 0) {
@@ -25,8 +35,15 @@ function shuffle(array) {
         array[randomIndex] = temporaryValue;
     }
 
-    return array;
+  
+    console.log(cards);
 }
+ let time = 0;
+ setInterval(t,1000);
+ function t(){
+    document.querySelector(".timer").innerHTML =time;
+    time++;
+ }
 
 
 /*
@@ -40,7 +57,6 @@ function shuffle(array) {
  *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
  */
 
- // code by sudhish
 
 
 let card1,card2;

@@ -87,13 +87,13 @@ h1 {
 
 .score-panel {
     text-align: left;
-    width: 345px;
+    width: 600px;
     margin-bottom: 10px;
 }
 
 .score-panel .stars {
     margin: 0;
-    padding: 0;
+    padding-right: 0px;
     display: inline-block;
     margin: 0 5px 0 0;
 }
@@ -106,6 +106,7 @@ h1 {
 .score-panel .restart {
     float: right;
     cursor: pointer;
+    margin-right: 40px;
 }
 .fa-star
 {
@@ -121,6 +122,11 @@ h1 {
 .fontsz
 {
     font-size:25px;
+    margin-left: 50px;
+}
+.timer
+{
+    margin-left:10px;
 }
 
 .mismatchedCardsShake {
