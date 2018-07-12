@@ -1,18 +1,12 @@
 /*
  * Create a list that holds all of your cards
  */
-
+// ----------------------------------------------------------------------------------------
+// cards array & length
 let cards = document.getElementsByClassName("card");
 const noOfCards = cards.length;
-let array = [];
-for(let i=0;i<noOfCards;i++)
-{
- array = cards[i].innerHTML;
-}
-document.querySelector(".restart").addEventListener("click",function(){
-   shuffle(array);
-});
 
+// ----------------------------------------------------------------------------------------
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
@@ -20,8 +14,8 @@ document.querySelector(".restart").addEventListener("click",function(){
  *   - add each card's HTML to the page
  */
 
-
- // Shuffle function from http://stackoverflow.com/a/2450976
+// ------------------------------------------------------------------------------------------
+// Shuffle function 
 
 function shuffle(array) { 
   
@@ -38,13 +32,19 @@ function shuffle(array) {
   
     console.log(cards);
 }
- let time = 0;
+// --------------------------------------------------------------------------------------------
+
+// ---------------------------------------------------------------------------------------------
+
+// timer code 
+let time = 0;
  setInterval(t,1000);
  function t(){
     document.querySelector(".timer").innerHTML =time;
     time++;
  }
 
+ //----------------------------------------------------------------------------------------------
 
 /*
  * set up the event listener for a card. If a card is clicked:
@@ -57,8 +57,9 @@ function shuffle(array) {
  *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
  */
 
+//  --------------------------------------------------------------------------------------------
 
-
+// code for matching cards
 let card1,card2;
 let cardClickNo = 1;
 let totalsteps = 0;
@@ -108,6 +109,11 @@ function c(evt)
 			  }  }
     }
 }
+
+//------------------------------------------------------------------------------------------ 
+
+//------------------------------------------------------------------------------------------
+//function code for wobble effect if mismatched
 function removewobble()
 {
 
@@ -118,7 +124,10 @@ function removewobble()
       mismatchedCards[j].classList.remove("mismatchedCardsShake");   
     } 
 }
+//---------------------------------------------------------------------------------------------
 
+//---------------------------------------------------------------------------------------------
+//function code for hiding cards if mismatched
 function removeshow(){
     const matchcards = document.querySelectorAll(".show");
     const matchcardlength = matchcards.length;
@@ -127,3 +136,5 @@ function removeshow(){
     matchcards[j].classList.remove("open","show");
     }
 }
+
+//----------------------------------------------------------------------------------------------

@@ -106,7 +106,7 @@ h1 {
 .score-panel .restart {
     float: right;
     cursor: pointer;
-    margin-right: 40px;
+    margin-right: 20px;
 }
 .fa-star
 {
@@ -122,12 +122,16 @@ h1 {
 .fontsz
 {
     font-size:25px;
-    margin-left: 50px;
+    margin-left: 40px;
 }
 .timer
 {
     margin-left:10px;
 }
+
+/*
+    Style for wobbling effect when cards is being mismatched
+*/
 
 .mismatchedCardsShake {
     animation: shake 0.5s;
@@ -146,4 +150,4 @@ h1 {
     80% { transform: translate(-1px, -1px) rotate(1deg); }
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
-  }
+  } 
