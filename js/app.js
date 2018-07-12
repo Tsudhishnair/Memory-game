@@ -7,6 +7,13 @@ let cards = document.getElementsByClassName("card");
 const noOfCards = cards.length;
 
 // ----------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------
+//shuffling the card 
+ document.querySelector(".restart").addEventListener("click",function(){
+    shuffle(cards);
+ });
+
+// ----------------------------------------------------------------------------------------
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
@@ -28,9 +35,8 @@ function shuffle(array) {
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
     }
-
-  
-    console.log(cards);
+    console.log(array);
+    return array;
 }
 // --------------------------------------------------------------------------------------------
 
