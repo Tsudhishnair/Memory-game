@@ -17,6 +17,12 @@ const noOfCards = cards.length;
         a[i] = cards[i].innerHTML;  
     }
     let shuffled = shuffle(a);
+    for(let i=0;i<cards.length;i++)
+    {
+        cards[i].innerHTML = shuffled[i]; 
+    }
+    resettimer();
+
  });
 
 // ----------------------------------------------------------------------------------------
@@ -34,6 +40,8 @@ function shuffle(array) {
   
     var currentIndex = array.length, temporaryValue, randomIndex;
 
+    console.log(array);
+    
     while (currentIndex !== 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex -= 1;
@@ -150,3 +158,8 @@ function removeshow(){
 }
 
 //----------------------------------------------------------------------------------------------
+// function to restart the timer on refresh
+function resettimer()
+{
+    time = 0;
+}
