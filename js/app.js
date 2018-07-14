@@ -22,7 +22,6 @@ const noOfCards = cards.length;
         cards[i].innerHTML = shuffled[i]; 
     }
     resettimer();
-
  });
 
 // ----------------------------------------------------------------------------------------
@@ -163,3 +162,24 @@ function resettimer()
 {
     time = 0;
 }
+
+//-----------------------------------------------------------------------------------------------
+//function for starcount
+
+document.addEventListener("click",function starcheck(){
+if(15-totalsteps<13)
+ {
+	document.querySelector(".star3").style.color="grey";
+	document.querySelector(".star3").style.textShadow="white";
+ }
+ else if(15-totalsteps<8)
+ {
+	 document.querySelector(".star2").style.color="grey";
+	 document.querySelector(".satr2").style.textShadow="white";
+ }
+ else if(15-totalsteps<4)
+ {
+	 document.querySelector(".star1").style.color="grey";
+	 document.querySelector(".star1").style.textShadow="white";
+ }
+});
