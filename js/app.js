@@ -57,7 +57,8 @@ function shuffle(array) {
 
 // timer code 
 let time = 0;
- setInterval(t,1000);
+
+ let a = setInterval(t,1000);
  function t(){
     document.querySelector(".timer").innerHTML =time;
     time++;
@@ -183,3 +184,19 @@ if(15-totalsteps<13 && 15-totalsteps>=8)
 	 document.querySelector(".star1").style.textShadow="white";
 	}
 });
+
+setInterval(rescheck,100);
+function rescheck(){
+let allopencards = document.querySelectorAll(".match");
+let allopencardslength = allopencards.length;
+if(allopencardslength == cards.length)
+{
+    clearInterval(a);
+    let finishtime =a;
+    let st = document.querySelector(".stars");
+    document.querySelector(".result-star").innerHTML=st.innerHTML;
+    document.querySelector(".result-steps").innerHTML = totalsteps;
+    document.querySelector(".result-time").innerHTML = finishtime;
+    
+}
+}

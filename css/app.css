@@ -160,3 +160,8 @@ h1 {
         width: 100%;
         display: visible;
     }    
+    .result-star
+    {
+        display: inline;
+        text-decoration-style: none;
+    }
