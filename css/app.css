@@ -151,3 +151,12 @@ h1 {
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   } 
+
+  /*Final Page */
+    .resultpage
+    {
+        background-color: rgb(255, 255, 255);
+        height: 100%;
+        width: 100%;
+        display: visible;
+    }    

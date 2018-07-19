@@ -182,6 +182,4 @@ if(15-totalsteps<13 && 15-totalsteps>=8)
 	 document.querySelector(".star1").style.color="grey";
 	 document.querySelector(".star1").style.textShadow="white";
 	}
- 
-
 });
