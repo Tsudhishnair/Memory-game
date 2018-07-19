@@ -56,15 +56,12 @@ function shuffle(array) {
 // ---------------------------------------------------------------------------------------------
 
 // timer code 
-
-document.addEventListener("click", function()
-{   let time = 0;
-    setInterval(t,1000);
-    function t(){
+let time = 0;
+ setInterval(t,1000);
+ function t(){
     document.querySelector(".timer").innerHTML =time;
     time++;
-    }});
-
+ }
 
  //----------------------------------------------------------------------------------------------
 
