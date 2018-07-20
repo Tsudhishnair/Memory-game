@@ -168,21 +168,21 @@ function resettimer()
 //function for starcount
 
 document.addEventListener("click",function(){
-if(15-totalsteps<13 && 15-totalsteps>=8)
+if((totalsteps>8)||(time>80))
  {
 	document.querySelector(".star3").style.color="grey";
 	document.querySelector(".star3").style.textShadow="white";
  }
- else if(15-totalsteps<8 && 15-totalsteps>=4)
+ else if((totalsteps>12)||(time>100))
  {
-	 document.querySelector(".star2").style.color="grey";
-	 document.querySelector(".satr2").style.textShadow="white";
-	}
- else if(15-totalsteps<4)
+    document.querySelector(".star2").style.color="grey";
+    document.querySelector(".satr2").style.textShadow="white";
+ }
+ else if((totalsteps>16)||(time>150))
  {
-	 document.querySelector(".star1").style.color="grey";
-	 document.querySelector(".star1").style.textShadow="white";
-	}
+    document.querySelector(".star1").style.color="grey";
+    document.querySelector(".star1").style.textShadow="white";
+ }
 });
 
 setInterval(rescheck,100);
@@ -196,7 +196,6 @@ if(allopencardslength == cards.length)
     let st = document.querySelector(".stars");
     document.querySelector(".result-star").innerHTML=st.innerHTML;
     document.querySelector(".result-steps").innerHTML = totalsteps;
-    document.querySelector(".result-time").innerHTML = finishtime;
-    
+    document.querySelector(".result-time").innerHTML = finishtime;   
 }
 }
