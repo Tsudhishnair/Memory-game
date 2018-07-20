@@ -21,8 +21,15 @@ const noOfCards = cards.length;
     {
         cards[i].innerHTML = shuffled[i]; 
     }
+    resetstars();
     resettimer();
  });
+ //----------------------------------------------------------------------------------------
+ // reset star function 
+ function resetstars()
+ {  
+     
+ }
 
 // ----------------------------------------------------------------------------------------
 /*
@@ -38,8 +45,6 @@ const noOfCards = cards.length;
 function shuffle(array) { 
   
     var currentIndex = array.length, temporaryValue, randomIndex;
-
-    console.log(array);
     
     while (currentIndex !== 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
@@ -48,7 +53,6 @@ function shuffle(array) {
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
     }
-    console.log(array);
     return array;
 }
 // --------------------------------------------------------------------------------------------
@@ -168,12 +172,12 @@ function resettimer()
 //function for starcount
 
 document.addEventListener("click",function(){
-if((totalsteps>8)||(time>80))
+if((totalsteps>8 && totalsteps<12)||(time>80 && time<100 ))
  {
 	document.querySelector(".star3").style.color="grey";
 	document.querySelector(".star3").style.textShadow="white";
  }
- else if((totalsteps>12)||(time>100))
+ else if((totalsteps>12 && totalsteps<16)||(time>100 && time<150))
  {
     document.querySelector(".star2").style.color="grey";
     document.querySelector(".satr2").style.textShadow="white";
