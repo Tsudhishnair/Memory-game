@@ -78,7 +78,7 @@ h1 {
 .deck .card.match {
     cursor: default;
     background: #02ccba;
-    font-size: 33px;
+    font-size: 33px; none;
 }
 
 /*
@@ -112,7 +112,11 @@ h1 {
 {
     color: #FFD700;
     font-size:30px;
-
+}
+.result-star
+{
+    display: inline;
+    display: inline-block;
 }
 .nostars
 {

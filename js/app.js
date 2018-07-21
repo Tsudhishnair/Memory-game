@@ -201,12 +201,14 @@ function rescheck(){
 let allopencards = document.querySelectorAll(".match");
 let allopencardslength = allopencards.length;
 if(allopencardslength == cards.length)
-{
-    clearInterval(a);
-    let finishtime =a;
-    let st = document.querySelector(".stars");
-    document.querySelector(".result-star").innerHTML=st.innerHTML;
-    document.querySelector(".result-steps").innerHTML = totalsteps;
-    document.querySelector(".result-time").innerHTML = finishtime;   
-}
+{   
+	clearInterval(a);
+	let finishtime =a;
+	let st = document.querySelector(".stars");
+	document.querySelector(".result-star").innerHTML=st.innerHTML;
+	document.querySelector(".result-steps").innerHTML = totalsteps;
+	document.querySelector(".result-time").innerHTML = finishtime;   
+	document.querySelector(".main").style.display="none";
+	document.querySelector(".resultpage").style.display="";
+	}
 }
