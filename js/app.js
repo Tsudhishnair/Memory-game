@@ -21,6 +21,11 @@ let totalsteps = 0;
     {
         cards[i].innerHTML = shuffled[i]; 
     }
+    cards = document.getElementsByClassName("card");
+    for(let i=0;i<cards.length;i++)
+    {
+        cards[i].className="card";
+    }
     totalsteps = 0;
     document.querySelector(".moves").innerHTML = totalsteps;
     resetstars();
