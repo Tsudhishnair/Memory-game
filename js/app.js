@@ -21,13 +21,14 @@ const noOfCards = cards.length;
     {
         cards[i].innerHTML = shuffled[i]; 
     }
+
     resetstars();
     resettimer();
  });
-
+ 
  function resetstars()
  { 
-
+    document.getElementById("str3").style.color="red";
  }
 
 // ----------------------------------------------------------------------------------------
@@ -41,8 +42,7 @@ const noOfCards = cards.length;
 // ------------------------------------------------------------------------------------------
 // Shuffle function 
 
-function shuffle(array) { 
-  
+function shuffle(array) {   
     var currentIndex = array.length, temporaryValue, randomIndex;
     
     while (currentIndex !== 0) {

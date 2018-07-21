@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-    <div class="resultpage container">
+    <div class="resultpage container" style="display: none;">
             <center>
                 <div style="font-size: 5rem;color: rgb(216, 92, 54);font-weight: bold;font-style: italic;">Congratulation</div>
                 <div><i class="fa fa-check-circle" style="font-size: 3rem;"></i></div>
@@ -28,10 +28,10 @@
         </header>
         <div id="modal"></div>
         <section class="score-panel">
-        	<ul class="stars">
-        		<li><i class="fa fa-star star1"></i></li>
-        		<li><i class="fa fa-star star2"></i></li>
-        		<li><i class="fa fa-star star3"></i></li>
+        	<ul class="stars" id="stars">
+        		<li><i class="fa fa-star star1" id="str1"></i></li>
+        		<li><i class="fa fa-star star2" id="str2"></i></li>
+        		<li><i class="fa fa-star star3" id="str3"></i></li>
         	</ul>
 
         	<span class="fontsz"><span class="moves">0</span> Moves</span>
