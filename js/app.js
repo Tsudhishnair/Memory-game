@@ -5,7 +5,7 @@
 // cards array & length
 let cards = document.getElementsByClassName("card");
 const noOfCards = cards.length;
-
+let totalsteps = 0;
 // ----------------------------------------------------------------------------------------
 // ----------------------------------------------------------------------------------------
 //shuffling the card 
@@ -21,14 +21,17 @@ const noOfCards = cards.length;
     {
         cards[i].innerHTML = shuffled[i]; 
     }
-
+    totalsteps = 0;
+    document.querySelector(".moves").innerHTML = totalsteps;
     resetstars();
     resettimer();
  });
  
  function resetstars()
  { 
-    document.getElementById("str3").style.color="red";
+    document.querySelector(".star3").style.color="gold";
+    document.querySelector(".star2").style.color="gold";
+    document.querySelector(".star1").style.color="gold";
  }
 
 // ----------------------------------------------------------------------------------------
@@ -85,7 +88,7 @@ let time = 0;
 // code for matching cards
 let card1,card2;
 let cardClickNo = 1;
-let totalsteps = 0;
+
 for(let i=0;i<noOfCards;i++)
 {
   cards[i].addEventListener("click",c,false);
