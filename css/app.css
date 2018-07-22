@@ -118,6 +118,10 @@ h1 {
     display: inline;
     display: inline-block;
 }
+.list
+{
+    display: inline;
+}
 .nostars
 {
     color:black;
