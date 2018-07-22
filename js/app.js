@@ -202,8 +202,8 @@ let allopencards = document.querySelectorAll(".match");
 let allopencardslength = allopencards.length;
 if(allopencardslength == cards.length)
 {   
+    let finishtime =time;
 	clearInterval(a);
-	let finishtime =a;
 	let st = document.querySelector(".stars");
 	document.querySelector(".result-star").innerHTML=st.innerHTML;
 	document.querySelector(".result-steps").innerHTML = totalsteps;
