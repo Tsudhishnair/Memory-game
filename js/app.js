@@ -184,15 +184,10 @@ if((totalsteps>8 && totalsteps<12)||(time>80 && time<100 ))
 	document.querySelector(".star3").style.color="grey";
 	document.querySelector(".star3").style.textShadow="white";
  }
- else if((totalsteps>12 && totalsteps<16)||(time>100 && time<150))
+ else if((totalsteps>12 )||(time>100   ))
  {
     document.querySelector(".star2").style.color="grey";
     document.querySelector(".satr2").style.textShadow="white";
- }
- else if((totalsteps>16)||(time>150))
- {
-    document.querySelector(".star1").style.color="grey";
-    document.querySelector(".star1").style.textShadow="white";
  }
 });
 
