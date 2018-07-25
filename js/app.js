@@ -6,6 +6,8 @@
 let cards = document.getElementsByClassName("card");
 const noOfCards = cards.length;
 let totalsteps = 0;
+let card1,card2;
+let cardClickNo = 1;
 // ----------------------------------------------------------------------------------------
 // ----------------------------------------------------------------------------------------
 //shuffling the card 
@@ -28,6 +30,9 @@ let totalsteps = 0;
     }
     totalsteps = 0;
     document.querySelector(".moves").innerHTML = totalsteps;
+    cardClickNo=1;
+    card1="";
+    card2="";
     resetstars();
     resettimer();
  });
@@ -91,8 +96,7 @@ let time = 0;
 //  --------------------------------------------------------------------------------------------
 
 // code for matching cards
-let card1,card2;
-let cardClickNo = 1;
+
 
 for(let i=0;i<noOfCards;i++)
 {
@@ -184,7 +188,7 @@ if((totalsteps>8 && totalsteps<12)||(time>80 && time<100 ))
 	document.querySelector(".star3").style.color="grey";
 	document.querySelector(".star3").style.textShadow="white";
  }
- else if((totalsteps>12 )||(time>100   ))
+ else if((totalsteps>12 )||(time>100))
  {
     document.querySelector(".star2").style.color="grey";
     document.querySelector(".satr2").style.textShadow="white";

@@ -1,47 +1,75 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Matching Game</title>
     <meta name="description" content="">
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
-		<link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
+
 <body>
     <div class="resultpage container" style="display: none;">
         <center>
             <div style="font-size: 5rem;color: rgb(216, 92, 54);font-weight: bold;font-style: italic;">Congratulation</div>
-            <div><i class="fa fa-check-circle" style="font-size: 3rem;"></i></div>
+            <div>
+                <i class="fa fa-check-circle" style="font-size: 3rem;"></i>
+            </div>
             <section class="score-panel">
                 <center>
-                    <span class="result-star"></span><br><br>
-                    <div><strong>Steps taken to complete the challenge <span class="result-steps"></span></strong></div><br>
-                    <div><strong>Time taken to complete the challenge <span class="result-time"></span> sec</strong></div>        
-                    <div><strong><a href="https://tsudhishnair.github.io/Memory-game/"><button class="playagain" >Play Again</button></a></strong></div>
+                    <span class="result-star"></span>
+                    <br>
+                    <br>
+                    <div>
+                        <strong>Steps taken to complete the challenge
+                            <span class="result-steps"></span>
+                        </strong>
+                    </div>
+                    <br>
+                    <div>
+                        <strong>Time taken to complete the challenge
+                            <span class="result-time"></span> sec</strong>
+                    </div>
+                    <div>
+                        <strong>
+                            <a href="https://tsudhishnair.github.io/Memory-game/">
+                                <button class="playagain">Play Again</button>
+                            </a>
+                        </strong>
+                    </div>
                 </center>
-            <section>
-        </center>	
+                <section>
+        </center>
     </div>
-    <div class="container main" >
+    <div class="container main">
         <header>
             <h1>Matching Game</h1>
         </header>
         <div id="modal"></div>
         <section class="score-panel">
-        	<ul class="stars" id="stars">
-        		<li class="list"><i class="fa fa-star star1" id="str1"></i></li>
-        		<li class="list"><i class="fa fa-star star2" id="str2"></i></li>
-        		<li class="list"><i class="fa fa-star star3" id="str3"></i></li>
-        	</ul>
+            <ul class="stars" id="stars">
+                <li class="list">
+                    <i class="fa fa-star star1" id="str1"></i>
+                </li>
+                <li class="list">
+                    <i class="fa fa-star star2" id="str2"></i>
+                </li>
+                <li class="list">
+                    <i class="fa fa-star star3" id="str3"></i>
+                </li>
+            </ul>
 
-        	<span class="fontsz"><span class="moves">0</span> Moves</span>
             <span class="fontsz">
-                Time :<span class="timer"></span>sec
+                <span class="moves">0</span> Moves</span>
+            <span class="fontsz">
+                Time :
+                <span class="timer"></span>sec
             </span>
             <div class="restart fontsz">
-        		<i class="fa fa-repeat"></i>
-        	</div>
+                <i class="fa fa-repeat"></i>
+            </div>
         </section>
         <ul class="deck">
             <li class="card">
@@ -49,7 +77,7 @@
             </li>
             <li class="card">
                 <i class="fa fa-paper-plane-o"></i>
-            </li> 
+            </li>
             <li class="card">
                 <i class="fa fa-anchor"></i>
             </li>
@@ -96,4 +124,5 @@
     </div>
     <script src="js/app.js"></script>
 </body>
+
 </html>
