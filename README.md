@@ -1,20 +1,23 @@
 # Memory Game Project
-
+---
 ## Table of Contents
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+* How the game is played
+* What the player is to expect from the game.
+* Game dependencies if any. Resources used to develop the game if any.
+---
+## How the game is played
 
-## Instructions
+Once the game is loaded the timer starts ticking, the player has to start the game immediately by clicking any one of the card on clicking of which the card is shown to the player which he/she must remember untill the other pair is found. Then the player clicks the second card if a both card matches then it remains open and is shown and if the cards are not matching the both the card gets hidden. The player must continue untill all the matched are being found with min number of selects and at min time inorder to obtain 3 star. The star rating determines the players expertise in the game. 
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
-
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+---
+## What the player is to expect from the game 
+   Leisure and memory building.
+   
+---
+## Languages/Resources used to develop the game
+* HTML
+* CSS
+* JavaScript 
+* Developer tools for debugging 
+* Udacity Nanodegree course materials for references. 
