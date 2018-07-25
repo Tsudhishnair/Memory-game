@@ -182,7 +182,7 @@ function resettimer()
 //-----------------------------------------------------------------------------------------------
 //function for starcount
 
-document.addEventListener("click",function(){
+document.addEventListener("load",function(){
 if((totalsteps>8 && totalsteps<12)||(time>80 && time<100 ))
  {
 	document.querySelector(".star3").style.color="grey";
