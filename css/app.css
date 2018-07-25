@@ -175,3 +175,13 @@ h1 {
         text-decoration-style: none;
     }
     
+/* Play again button*/
+.playagain{
+    color:rgb(251, 251, 251);
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: rgb(148, 52, 52);
+    margin-top:2rem;
+    padding: 10px;
+    border-radius: 10px;
+}
