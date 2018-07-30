@@ -125,6 +125,7 @@ function c(evt)
                 matchcards[j].classList.remove("open","show");
             }
             totalsteps+=1;
+            starcount();
             document.querySelector(".moves").innerHTML=totalsteps;
         }
         
@@ -140,6 +141,7 @@ function c(evt)
             } 
             setTimeout(removewobble,500);
             totalsteps+=1;
+            starcount();
             document.querySelector(".moves").innerHTML=totalsteps;
 			  }  }
     }
@@ -182,20 +184,18 @@ function resettimer()
 //-----------------------------------------------------------------------------------------------
 //function for starcount
 
-document.addEventListener("load",function(){
-if((totalsteps>8 && totalsteps<12)||(time>80 && time<100 ))
+function starcount(){
+if(totalsteps>8 && totalsteps<12)
  {
 	document.querySelector(".star3").style.color="grey";
-	document.querySelector(".star3").style.textShadow="white";
  }
- else if((totalsteps>12 )||(time>100))
+ else if(totalsteps>12 )
  {
     document.querySelector(".star2").style.color="grey";
-    document.querySelector(".satr2").style.textShadow="white";
  }
-});
+}
 
-setInterval(rescheck,100);
+setInterval(rescheck(),100);
 function rescheck(){
 let allopencards = document.querySelectorAll(".match");
 let allopencardslength = allopencards.length;
